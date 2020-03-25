@@ -1,0 +1,127 @@
+html {
+    font-size: 62.5%;
+    font-family: $mainFont;
+}
+
+body,
+ul,
+h1,
+h2,
+h3
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+
+.wrapper {
+	width: 75%;
+	max-width: 1280px;
+    margin: 0 auto;
+}
+
+// Start of the font styling
+h1 {
+    font-size: 7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+h2,
+fieldset {
+    font-size: 2.5rem;
+    font-family: '$secondaryFont';
+}
+
+a, 
+button {
+    font-size: 2rem;
+}
+
+
+// This is the background image
+body {
+    background-image: url(../assets/background.png);
+    background-size: 40%;
+    // opacity: 0.9;
+    
+}
+// Start of the header
+header {
+    height: 350px;
+    margin-top: 100px; 
+}
+
+.headingText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: $main;
+    opacity: 0.95;
+    border: 1px solid $main;
+    border-radius: 25px;
+    height: 350px;
+}
+
+.headingText {
+    h1 {
+        margin: 40px 0;
+        max-width: 100%;
+    }
+    h2 {
+        padding-bottom: 60px;
+    }
+}
+
+.headingText a,
+button {
+    background-color: rgb(199, 134, 156);
+    border: 1px solid rgb(144, 134, 199);
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+
+// Start of the question styles
+
+.questions {
+    margin: 50px 0;
+}
+
+fieldset {
+    border: 3px solid navy;
+    border-radius: 25px;
+    margin: 25px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+fieldset p {
+    padding: 30px 0;
+}
+
+.questionChoices input {
+    display: inline-block;
+}
+
+.bottomContainer {
+    display: flex;
+    justify-content: center;
+}
