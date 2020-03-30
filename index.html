@@ -15,9 +15,10 @@
                     <div class="headingText">
                         <h1>Plant Matchmaker</h1>
                         <h2>Answer the questions below to find your perfect plant!</h2>
-                        <a href="">Find a Plant</a>
+                        <!-- <a href="">Find a Plant</a> add if time -->
                     </div>
                 </div>
+
         </header>
         <!-- Start of the main -->
         <main>
@@ -25,37 +26,55 @@
                 <!-- start of the question section -->
                 <section>
                     <form class="questions" action="">
-                        <fieldset class="light">
+                        <fieldset>
                             <p>How much natural light do you have?</p>
                             <div class="questionChoices">
-                                <input type="radio" id="lots" name="light" value="10">
-                                <label for="so much">So much</label>
-                                <input type="radio" id="some" name="light" value="5">
-                                <label for="some">Some</label>
-                                <input type="radio" id="none" name="light" value="0">
-                                <label for="none">None</label>
+                                <div class="questionOption">
+                                    <input type="radio" id="lots" name="light" value="10">
+                                    <label for="so much">So much</label>
+                                </div>
+                                <div class="questionOption">
+                                    <input type="radio" id="some" name="light" value="5">
+                                    <label for="some">Some</label>
+                                </div>
+                                <div class="questionOption">
+                                    <input type="radio" id="none" name="light" value="0">
+                                    <label for="none">None</label>
+                                </div>
                             </div>
                         </fieldset>
-                        <fieldset class="water">
+                        <fieldset>
                             <p>Can you remember to water something?</p>
                             <div class="questionChoices">
-                                <input type="radio" id="absolutely" name="water" value="10">
-                                <label for="Absolutely">Absolutely</label>
-                                <input type="radio" id="sometimes" name="water" value="5">
-                                <label for="Sometimes">Sometimes</label>
-                                <input type="radio" id="no" name="water" value="0">
-                                <label for="No">No</label>
+                                <div class="questionOption">
+                                    <input type="radio" id="absolutely" name="water" value="10">
+                                    <label for="Absolutely">Absolutely</label>
+                                </div>
+                                <div class="questionOption">
+                                    <input type="radio" id="sometimes" name="water" value="5">
+                                    <label for="Sometimes">Sometimes</label>
+                                </div>
+                                <div class="questionOption">
+                                    <input type="radio" id="no" name="water" value="0">
+                                    <label for="No">No</label>
+                                </div>
                             </div>
                         </fieldset>
-                        <fieldset class="record">
+                        <fieldset>
                             <p>What's your plant track record?</p>
                             <div class="questionChoices">
-                                <input type="radio" id="green" name="record" value="10">
-                                <label for="Everything I touch turns to green">Everything I touch turns to green</label>
-                                <input type="radio" id="succulents" name="record" value="5">
-                                <label for="I've had luck with succulents">I've had luck with succulents</label>
-                                <input type="radio" id="cemetary" name="record" value="0">
-                                <label for="My home plant cemetary">My home is a plant cemetary</label>
+                                <div class="questionOption">
+                                    <input type="radio" id="green" name="record" value="10">
+                                    <label for="Everything I touch turns to green">Everything I touch turns to green</label>
+                                </div>
+                                <div class="questionOption">
+                                    <input type="radio" id="succulents" name="record" value="5">
+                                    <label for="I've had luck with succulents">I've had luck with succulents</label>
+                                </div>
+                                <div class="questionOption">
+                                    <input type="radio" id="cemetary" name="record" value="0">
+                                    <label for="My home plant cemetary">My home is a plant cemetary</label>
+                                </div>
                             </div>
                         </fieldset>
                         <div class="bottomContainer">

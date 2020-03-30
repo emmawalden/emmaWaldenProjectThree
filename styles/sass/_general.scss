@@ -56,10 +56,8 @@ button {
 
 // This is the background image
 body {
-    background-image: url(../assets/background.png);
+    background-image: url(../assets/background.jpg);
     background-size: 40%;
-    // opacity: 0.9;
-    
 }
 // Start of the header
 header {
@@ -93,7 +91,7 @@ header {
 .headingText a,
 button {
     background-color: rgb(199, 134, 156);
-    border: 1px solid rgb(144, 134, 199);
+    border: 1px solid #03051d;
     padding: 10px 30px;
     border-radius: 10px;
 }
@@ -106,22 +104,45 @@ button {
 }
 
 fieldset {
-    border: 3px solid navy;
+    border: 3px solid #03051d;
     border-radius: 25px;
     margin: 25px 0;
     background-color: #fff;
-    text-align: center;
-}
-
-fieldset p {
     padding: 30px 0;
 }
 
-.questionChoices input {
-    display: inline-block;
+fieldset p {
+    padding-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.questionChoices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.questionOption {
+    display: flex;
+    padding: 10px 0;
+        label {
+            padding-left: 10px;
+        }
 }
 
 .bottomContainer {
     display: flex;
     justify-content: center;
+}
+
+// Plant images that are added upon submit
+.resultStyles {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+.imageStyles {
+    width: 500px;
+    padding: 50px;
 }

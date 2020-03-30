@@ -276,7 +276,7 @@ button {
 }
 
 body {
-  background-image: url(../assets/background.png);
+  background-image: url(../assets/background.jpg);
   background-size: 40%;
 }
 
@@ -320,7 +320,7 @@ header {
 .headingText a,
 button {
   background-color: #c7869c;
-  border: 1px solid #9086c7;
+  border: 1px solid #03051d;
   padding: 10px 30px;
   border-radius: 10px;
 }
@@ -330,19 +330,41 @@ button {
 }
 
 fieldset {
-  border: 3px solid navy;
+  border: 3px solid #03051d;
   border-radius: 25px;
   margin: 25px 0;
   background-color: #fff;
-  text-align: center;
-}
-
-fieldset p {
   padding: 30px 0;
 }
 
-.questionChoices input {
-  display: inline-block;
+fieldset p {
+  padding-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.questionChoices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.questionOption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0;
+}
+
+.questionOption label {
+  padding-left: 10px;
 }
 
 .bottomContainer {
@@ -352,4 +374,19 @@ fieldset p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.resultStyles {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.imageStyles {
+  width: 500px;
+  padding: 50px;
 }

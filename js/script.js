@@ -41,33 +41,59 @@ $(document).ready(function() {
 
     // Three variables to store the answers from each question, when button is clicked
     function formSubmitted() {
-        const answer1 = $('input[name=light]:checked').val();
-        const answer2 = $('input[name=water]:checked').val(); 
-        const answer3 = $('input[name=record]:checked').val();
-
-    // Store the answers in an array
-        const userAnswer = [answer1, answer2, answer3];
-        console.log(userAnswer);
+        const answer1 = $("input[name=light]:checked").val();
+        const answer2 = $("input[name=water]:checked").val(); 
+        const answer3 = $("input[name=record]:checked").val();
 
     // convert answers into numbers to be able to add them 
         const sum = parseInt(answer1) + parseInt(answer2) + parseInt(answer3);
         console.log(sum);
     
     // Conditions to match the sum of the user responses with a plant
-        if (sum >= 30) {
-            console.log('ficus');
+        if (sum >= 30) { 
+            const yourResult = document.createElement('div');
+            yourResult.classList.add("resultStyles");
+            const yourResultImage = document.createElement('img');
+            yourResultImage.src = "./assets/ficus.jpeg";
+            yourResultImage.classList.add("imageStyles")
+            yourResult.appendChild(yourResultImage)
+            document.body.appendChild(yourResult);
         } else if (sum >= 25) {
-            console.log('zanzibar');
+            const yourResult = document.createElement('div');
+            yourResult.classList.add("resultStyles");
+            const yourResultImage = document.createElement('img');
+            yourResultImage.src = "./assets/zz.jpeg";
+            yourResultImage.classList.add("imageStyles")
+            yourResult.appendChild(yourResultImage)
+            document.body.appendChild(yourResult);
         } else if (sum === 20 ) {
-            console.log('succulent');
+            const yourResult = document.createElement('div');
+            yourResult.classList.add("resultStyles");
+            const yourResultImage = document.createElement('img');
+            yourResultImage.src = "./assets/succulent.jpeg";
+            yourResultImage.classList.add("imageStyles")
+            yourResult.appendChild(yourResultImage)
+            document.body.appendChild(yourResult);
         } else if (sum === 15 || sum === 10) {
-            console.log('snake');
+            const yourResult = document.createElement('div');
+            yourResult.classList.add("resultStyles");
+            const yourResultImage = document.createElement('img');
+            yourResultImage.src = "./assets/snakePlant.jpeg";
+            yourResultImage.classList.add("imageStyles")
+            yourResult.appendChild(yourResultImage)
+            document.body.appendChild(yourResult);
         } else if(sum <= 5) {
-            console.log('plastic');
+            const yourResult = document.createElement('div');
+            yourResult.classList.add("resultStyles");
+            const yourResultImage = document.createElement('img');
+            yourResultImage.src = "./assets/plastic.jpeg";
+            yourResultImage.classList.add("imageStyles")
+            yourResult.appendChild(yourResultImage)
+            document.body.appendChild(yourResult);
         }
     }
         
-        $('form').on('submit', function(event) {
+        $("form").on("submit", function(event) {
             //  prevent default action, 
             event.preventDefault();
             formSubmitted();
