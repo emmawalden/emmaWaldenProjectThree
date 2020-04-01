@@ -3,8 +3,10 @@ const plants = {
         {
             light: "So much",
             water: "Absolutely",
-            record: "Everything I touch turns to green"
-        }
+            record: "Everything I touch turns to green", 
+            src: "./assets/ficus.jpeg",
+            text: "You're a pro get yourself a Fiddle Leaf Fig!" 
+        },
     ],
     zanzibar: [
         {
@@ -38,69 +40,49 @@ const plants = {
 
 $(document).ready(function() {
     
+    $("form").on("submit", function (event) {
+        //  prevent default action, 
+        event.preventDefault();
 
-    // Three variables to store the answers from each question, when button is clicked
-    function formSubmitted() {
+    
+    // Three variables to store the answers from each question, when submit button is clicked
         const answer1 = $("input[name=light]:checked").val();
         const answer2 = $("input[name=water]:checked").val(); 
         const answer3 = $("input[name=record]:checked").val();
 
-        // Sweet alert, may not need if radio buttons are always checked
-        // if (answer1.checked === false | answer2.checked === false | answer3.checked === false) {
-        //     swal({
-        //         text: "Please pick a response",
-        //         icon: "error",
-        //     });
-        // }
-        
-
     // convert answers into numbers to be able to add them 
         const sum = parseInt(answer1) + parseInt(answer2) + parseInt(answer3);
 
-
-    // Creating variables to be added to the DOM
-        const yourResultImage = document.createElement('img');
-        yourResultImage.classList.add("imageStyles")
-        const yourResultHeading = document.createElement('h3');
-    
-    // Conditions to match the sum of the user responses with a plant
+    // Conditions to match the sum of the user responses with a plant OR alert user if they don't answer all the questions
         if (sum >= 30) { 
-            yourResultImage.src = "./assets/ficus.jpeg";
-            yourResultHeading.textContent = "You're a pro get yourself a Fiddle Leaf Fig!";
-            yourResult.appendChild(yourResultHeading);
-            yourResult.appendChild(yourResultImage);
-            document.body.appendChild(yourResult);
+            $(".quizResults").html(`<h3>You're a pro get yourself a Fiddle Leaf Fig!</h3>
+            <img class="imageStyles" src="./assets/ficus.jpeg" alt"Fiddle Leaf Fig plant in basket">`);
         } else if (sum >= 25) {
-            yourResultImage.src = "./assets/zz.jpeg";
-            yourResultHeading.textContent = "Try out a Zanzibar Gem!";
-            yourResult.appendChild(yourResultHeading);
-            yourResult.appendChild(yourResultImage);
-            document.body.appendChild(yourResult);
+            $(".quizResults").html(`<h3>Try out a Zanzibar Gem!</h3>
+            <img class="imageStyles" src="./assets/zz.jpg" alt"Sprig of a Zanzibar Gem">`);
         } else if (sum === 20 ) {
-            yourResultImage.src = "./assets/succulent.jpeg";
-            yourResultHeading.textContent = "Try a trusty succulent";
-            yourResult.appendChild(yourResultHeading);
-            yourResult.appendChild(yourResultImage);
-            document.body.appendChild(yourResult);
+            $(".quizResults").html(`<h3>Try a trusty succulent</h3>
+            <img class="imageStyles" src="./assets/succulent.jpeg" alt"Succulent in a small vase">`);
         } else if (sum === 15 || sum === 10) {
-            yourResultImage.src = "./assets/snakePlant.jpeg";
-            yourResultHeading.textContent = "Try out a snake plant";
-            yourResult.appendChild(yourResultHeading);
-            yourResult.appendChild(yourResultImage);
-            document.body.appendChild(yourResult);
+            $(".quizResults").html(`<h3>Try out a snake plant</h3>
+            <img class="imageStyles" src="./assets/snakePlant.jpeg" alt"Small snake plant in a terracotta pot">`);
         } else if(sum <= 5) {
-            yourResultImage.src = "./assets/plastic.jpeg";
-            yourResultHeading.textContent = "Best to stick to plastic!";
-            yourResult.appendChild(yourResultHeading);
-            yourResult.appendChild(yourResultImage);
-            document.body.appendChild(yourResult);
-        }
-    }
-        
-        $("form").on("submit", function(event) {
-            //  prevent default action, 
-            event.preventDefault();
-            formSubmitted();
+            $(".quizResults").html(`<h3>Best to stick to plastic</h3>
+            <img class="imageStyles" src="./assets/plastic.jpeg" alt"Close up of a plastic plant">`);
+        } else {
+            swal({
+            text: "Make sure to answer them all!",
+            icon: "error",
+                });
 
+            };
         });
-});
+
+    // This button reloads the page and scrolls to the top to take quiz again
+        $(".takeQuizAgain").on('click', function () {
+            location.reload();
+            $("html").scrollTop(0);
+        });
+
+    });
+        

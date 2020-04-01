@@ -272,6 +272,11 @@ p {
   font-size: 2rem;
 }
 
+button {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
 h3 {
   font-size: 2.5rem;
 }
@@ -339,14 +344,19 @@ fieldset p {
       align-self: flex-end;
 }
 
-.bottomContainer {
+.bottomContainer,
+.takeQuizAgain {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 50px 0;
+  padding-top: 50px;
+}
+
+.takeQuizAgain {
+  padding-bottom: 50px;
 }
 
 button {
@@ -375,12 +385,14 @@ button {
 .imageStyles {
   width: 500px;
   padding: 50px;
-  border: 3px solid #001E42;
+  border: 5px solid #001E42;
   border-radius: 5px;
 }
 
 h3 {
   padding: 50px 0;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
 }
 
 footer {
@@ -389,4 +401,45 @@ footer {
   padding: 40px 0;
   text-align: center;
   border-top: 1px solid #001E42;
+}
+
+@media (max-width: 1200px) {
+  .headingText h1 {
+    margin: 30px 0;
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .headingText h1 {
+    margin: 30px 0;
+    font-size: 7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  h2,
+  fieldset,
+  a,
+  button,
+  p {
+    font-size: 1.8rem;
+  }
+  header {
+    height: 500px;
+  }
+  .headingText h1 {
+    margin: 20px 0;
+    font-size: 6rem;
+  }
+  footer {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 340px) {
+  .headingText h1 {
+    margin: 10px 0;
+    font-size: 4.5rem;
+  }
 }
