@@ -1,6 +1,7 @@
 html {
     font-size: 62.5%;
     font-family: $mainFont;
+    color: $main;
 }
 
 body,
@@ -36,91 +37,59 @@ img {
 
 // Start of the font styling
 h1 {
-    font-size: 7rem;
+    font-family: $secondaryFont;
+    font-size: 9.5rem;
     text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 4px;
 }
 
 h2,
-fieldset {
-    font-size: 2.5rem;
-    font-family: '$secondaryFont';
-}
-
-a, 
-button {
+fieldset,
+a,
+button,
+p {
     font-size: 2rem;
 }
 
-
-// This is the background image
-body {
-    background-image: url(../assets/background.jpg);
-    background-size: 40%;
+h3 {
+    font-size: 2.5rem;
 }
-// Start of the header
+
 header {
-    height: 350px;
-    margin-top: 100px; 
+    height: 670px;
+    background-image: url(../assets/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .headingText {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
     flex-wrap: wrap;
-    background-color: $main;
-    opacity: 0.95;
-    border: 1px solid $main;
-    border-radius: 25px;
-    height: 350px;
 }
 
 .headingText {
     h1 {
-        margin: 40px 0;
-        max-width: 100%;
+        margin: 75px 0;
+        max-width: 50%;
     }
     h2 {
         padding-bottom: 60px;
+        max-width: 80%;
     }
 }
 
-.headingText a,
-button {
-    background-color: rgb(199, 134, 156);
-    border: 1px solid #03051d;
-    padding: 10px 30px;
-    border-radius: 10px;
-}
+// Start of the intro section
 
 
 // Start of the question styles
-
-.questions {
-    margin: 50px 0;
-}
-
 fieldset {
-    border: 3px solid #03051d;
-    border-radius: 25px;
-    margin: 25px 0;
-    background-color: #fff;
     padding: 30px 0;
 }
 
 fieldset p {
     padding-bottom: 20px;
-    font-weight: 700;
-    text-align: center;
-}
-
-.questionChoices {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .questionOption {
@@ -131,18 +100,53 @@ fieldset p {
         }
 }
 
+.questionGroup {
+    background: linear-gradient(-10deg, $main 70%, #fff 30%);
+}
+
+.record,
+.water {
+    color: #fff;
+}
+// Start of the button styling
 .bottomContainer {
     display: flex;
     justify-content: center;
+    padding: 50px 0;
+}
+
+button {
+    background-color: $main;
+    color: #fff;
+    border: 1px solid $main;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+// Start of the footer
+footer {
+    background-color: #fff;
+    color: $main;
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid $main;
 }
 
 // Plant images that are added upon submit
 .resultStyles {
     background-color: white;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
 }
 .imageStyles {
     width: 500px;
     padding: 50px;
+    border: 3px solid $main;
+    border-radius: 5px;
+}
+
+h3 {
+    padding: 50px 0;
 }
