@@ -1,0 +1,43 @@
+
+// Start of the question styles
+fieldset {
+    padding: 30px 0;
+}
+
+fieldset p {
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.questionOption {
+    display: flex;
+    padding: 10px 0;
+        label {
+            padding-left: 10px;
+        }
+}
+
+.questionGroup {
+    background: linear-gradient(-10deg, $secondary 70%, #fff 30%);
+}
+
+.icon {
+    width: 100px;
+    align-self: flex-end;
+}
+
+// Start of the button styling
+.bottomContainer {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+button {
+    background-color: $main;
+    color: #fff;
+    border: 1px solid $main;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+

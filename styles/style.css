@@ -314,7 +314,8 @@ fieldset {
 }
 
 fieldset p {
-  padding-bottom: 20px;
+  padding: 20px 0;
+  font-weight: bold;
 }
 
 .questionOption {
@@ -329,12 +330,13 @@ fieldset p {
 }
 
 .questionGroup {
-  background: linear-gradient(-10deg, #001E42 70%, #fff 30%);
+  background: linear-gradient(-10deg, #FFCDAC 70%, #fff 30%);
 }
 
-.record,
-.water {
-  color: #fff;
+.icon {
+  width: 100px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .bottomContainer {
@@ -355,16 +357,8 @@ button {
   border-radius: 5px;
 }
 
-footer {
+.quizResults {
   background-color: #fff;
-  color: #001E42;
-  padding: 40px 0;
-  text-align: center;
-  border-top: 1px solid #001E42;
-}
-
-.resultStyles {
-  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -387,4 +381,12 @@ footer {
 
 h3 {
   padding: 50px 0;
+}
+
+footer {
+  background-color: #fff;
+  color: #001E42;
+  padding: 40px 0;
+  text-align: center;
+  border-top: 1px solid #001E42;
 }

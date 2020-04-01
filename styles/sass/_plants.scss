@@ -1,0 +1,18 @@
+// Plant images and text that are added upon submit
+.quizResults {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+.imageStyles {
+    width: 500px;
+    padding: 50px;
+    border: 3px solid $main;
+    border-radius: 5px;
+}
+
+h3 {
+    padding: 50px 0;
+}

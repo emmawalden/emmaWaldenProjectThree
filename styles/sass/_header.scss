@@ -1,0 +1,25 @@
+header {
+    height: 670px;
+    background-image: url(../assets/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.headingText {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.headingText {
+    h1 {
+        margin: 75px 0;
+        max-width: 50%;
+    }
+    h2 {
+        padding-bottom: 60px;
+        max-width: 80%;
+    }
+}

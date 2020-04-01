@@ -59,8 +59,6 @@ $(document).ready(function() {
 
 
     // Creating variables to be added to the DOM
-        const yourResult = document.createElement('div');
-        yourResult.classList.add("resultStyles");
         const yourResultImage = document.createElement('img');
         yourResultImage.classList.add("imageStyles")
         const yourResultHeading = document.createElement('h3');
