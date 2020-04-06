@@ -8,6 +8,11 @@
             font-size: 8rem;
         }
     }
+
+    // Reducing padding between the questions 
+    fieldset {
+        padding: 15px 0;
+    }  
 }
 
 
@@ -18,16 +23,36 @@
             font-size: 7rem;
         }
     }
+
+    // Reducing padding & size of the plant image 
+    .quizResults {
+        padding: 20px 0;
+    }
+
+    .imageStyles {
+        width: 350px;
+        height: 350px;
+        padding: 25px;
+    }
+
+    h3 {
+        padding: 20px 0 30px 0;
+    }
 }
 
 
 @media (max-width: 600px) {
+// Reducing font-sizes
     h2,
     fieldset,
     a,
     button,
     p {
         font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 2rem;
     }
 // Reducing font sizing of header for mobile
     header {
@@ -40,6 +65,23 @@
             font-size: 6rem;
         }
     }
+
+    fieldset p {
+        text-align: center;
+        line-height: 20px;
+    }
+
+    // Reducing plant image size for smallest mobile screens
+    .imageStyles {
+        width: 225px;
+        height: 225px;
+        padding: 20px;
+    }
+
+    .takeQuizAgain {
+        padding: 10px 0 30px 0;
+    }
+
 // Reducing padding on the footer 
     footer {
         padding: 20px 0;
@@ -48,10 +90,14 @@
 }
 
 @media (max-width: 340px) {
+    header {
+        height: 400px;
+    }
     .headingText {
         h1 {
             margin: 10px 0;
             font-size: 4.5rem;
         }
     }
+
 }
