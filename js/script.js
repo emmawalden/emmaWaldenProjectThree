@@ -100,6 +100,13 @@ $(document).ready(function() {
             `);
         });
 
+    // Smooth scroll after clicking "Get your plant" button
+        $(".submit").click(function () {
+            $("html, body").animate({
+                scrollTop: $(this).offset().top
+            }, 800);
+        });
+
     // This button reloads the page and scrolls to the top to take quiz again
         $(".takeQuizAgain").on('click', function () {
             location.reload();
