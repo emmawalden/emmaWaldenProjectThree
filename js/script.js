@@ -65,7 +65,7 @@ $(document).ready(function() {
         const answer2 = $("input[name=water]:checked").val(); 
         const answer3 = $("input[name=record]:checked").val();
 
-    // convert answers into numbers to be able to add them 
+    // Convert answers into numbers to be able to add them together
         const sum = parseInt(answer1) + parseInt(answer2) + parseInt(answer3);
 
     // Get plant name from plantSum object based on user selection
@@ -85,7 +85,7 @@ $(document).ready(function() {
         for (let i = 0; i < plants.length; i++) {
             const tag = plants[i].tag;
         
-    // Match the sum of the user responses with the corresponding plant tag name 
+    // Match the sum of the user responses with the corresponding plant tag name, store matching text, img, and alt in a variables 
             if (plantSum.includes(tag)) { 
                 plantText = plants[i].text;
                 plantImage = plants[i].src;
@@ -94,7 +94,7 @@ $(document).ready(function() {
         };  
     
 
-    //  Dynamically add html of heading and image to the page
+    //  Dynamically add html stored in variables to the DOM
         $(".quizResults").html(`<h3>${plantText}</h3>
         <img class="imageStyles" src="${plantImage}" alt="${plantAlt}"></img>
             `);

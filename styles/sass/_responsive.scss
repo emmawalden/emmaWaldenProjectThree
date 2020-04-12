@@ -1,7 +1,6 @@
-
-
-
+// Media Queries to make site responsive
 @media (max-width: 1200px) {
+    // Reducing heading size
     .headingText {
         h1 {
             margin: 30px 0;
@@ -45,7 +44,6 @@
 // Reducing font-sizes
     h2,
     fieldset,
-    a,
     button,
     p {
         font-size: 1.8rem;
@@ -53,8 +51,9 @@
 
     h3 {
         font-size: 2rem;
+        text-align: center;
     }
-// Reducing font sizing of header for mobile
+    // Reducing height of header for mobile
     header {
         height: 500px;
     }
@@ -65,13 +64,21 @@
             font-size: 6rem;
         }
     }
-
+    
+    fieldset {
+        padding: 5px 0;
+    }
+    // Centering questions and plant result heading
     fieldset p {
         text-align: center;
         line-height: 20px;
     }
 
-    // Reducing plant image size for smallest mobile screens
+    .bottomContainer {
+        padding: 25px 0 35px 0;
+    }
+
+    // Reducing plant image size 
     .imageStyles {
         width: 225px;
         height: 225px;
@@ -82,11 +89,10 @@
         padding: 10px 0 30px 0;
     }
 
-// Reducing padding on the footer 
+    // Reducing padding on the footer 
     footer {
         padding: 20px 0;
     }
-
 }
 
 @media (max-width: 340px) {
@@ -95,9 +101,8 @@
     }
     .headingText {
         h1 {
-            margin: 10px 0;
-            font-size: 4.5rem;
+            margin: 20px 0;
+            font-size: 4.0rem;
         }
     }
-
 }

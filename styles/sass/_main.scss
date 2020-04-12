@@ -1,7 +1,11 @@
+// Lineary gradient styling on the questions
+.questions {
+    background:linear-gradient(-10deg, $secondary 75%, #fff 25%);
+}
 
 // Start of the question styles
 fieldset {
-    padding: 30px 0;
+    padding-top: 30px;
 }
 
 fieldset p {
@@ -17,28 +21,24 @@ fieldset p {
         }
 }
 
-.questionGroup {
-    
-    // background-image: url(../assets/plantIcon.svg);
-    // background-repeat: no-repeat;
-    // background-position: right;
-    background:linear-gradient(-10deg, $secondary 70%, #fff 30%);
+// Start of the button styling
+button {
+    background-color: $main;
+    color: #fff;
+    border: 2px solid $main;
+    padding: 10px 30px;
+    border-radius: 5px;
 }
 
-// Start of the button styling
 .bottomContainer,
 .takeQuizAgain {
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    padding: 50px 0 50px 0;
 }
 
-button {
-    background-color: $main;
-    color: #fff;
-    border: 1px solid $main;
-    padding: 10px 30px;
-    border-radius: 5px;
+.bottomContainer button:hover {
+    border: 2px solid #fff;
 }
 
 .takeQuizAgain {
@@ -73,6 +73,13 @@ button {
         background-repeat:no-repeat;
         background-position:500px 500px;
     }
+}
+
+// Hover effect for the take quiz again button only
+.takeQuizAgain button:hover {
+    background-color: $secondary;
+    color: $main;
+    border: 2px solid $main;
 }
 
 
