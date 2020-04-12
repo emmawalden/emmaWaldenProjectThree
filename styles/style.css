@@ -487,6 +487,9 @@ footer {
     margin: 20px 0;
     font-size: 6rem;
   }
+  .questions {
+    background: linear-gradient(-7deg, #FFCDAC 72%, #fff 28%);
+  }
   fieldset {
     padding: 5px 0;
   }
