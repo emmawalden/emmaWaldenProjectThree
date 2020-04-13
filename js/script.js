@@ -53,14 +53,15 @@ const plants = [
         },
     ];
 
+// Wait until document is ready before running 
 $(document).ready(function() {
     
     $("form").on("submit", function(event) {
-        //  prevent default action, 
+        //  prevent default action from refreshing the page when submit is clicked 
         event.preventDefault();
 
     
-    // Three variables to store the answers from each question, when submit button is clicked
+    // Three variables to store the user's answers from each question
         const answer1 = $("input[name=light]:checked").val();
         const answer2 = $("input[name=water]:checked").val(); 
         const answer3 = $("input[name=record]:checked").val();
@@ -85,7 +86,7 @@ $(document).ready(function() {
         for (let i = 0; i < plants.length; i++) {
             const tag = plants[i].tag;
         
-    // Match the sum of the user responses with the corresponding plant tag name, store matching text, img, and alt in a variables 
+    // Match the sum of the user responses with the corresponding plant tag name, store matching text, img, and alt in a variable 
             if (plantSum.includes(tag)) { 
                 plantText = plants[i].text;
                 plantImage = plants[i].src;
