@@ -31,8 +31,13 @@ img {
 }
 
 // Start of the font styling
-h1 {
+h1,  
+button {
     font-family: $secondaryFont;
+}
+
+h1 {
+    
     font-size: 9.5rem;
     text-transform: uppercase;
 }
@@ -45,7 +50,6 @@ p {
 }
 
 button {
-    font-family: $secondaryFont;
     text-transform: uppercase;
 }
 
