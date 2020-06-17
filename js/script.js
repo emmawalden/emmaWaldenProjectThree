@@ -57,64 +57,72 @@ app.plants = [
         },
     ];
     
-    $("form").on("submit", function(event) {
-        //  prevent default action from refreshing the page when submit is clicked 
-        event.preventDefault();
+    app.eventListeners = function() {
 
+        $("form").on("submit", function(event) {
+            //  prevent default action from refreshing the page when submit is clicked 
+            event.preventDefault();
     
-    // Three variables to store the user's answers from each question
-        const answer1 = $("input[name=light]:checked").val();
-        const answer2 = $("input[name=water]:checked").val(); 
-        const answer3 = $("input[name=record]:checked").val();
-
-    // Convert answers into numbers to be able to add them together
-        const sum = parseInt(answer1) + parseInt(answer2) + parseInt(answer3);
-
-    // Get plant name from plantSum object based on user selection
-        const plantSum = app.plantValue[sum];
-        let plantText;
-        let plantImage;
-        let plantAlt;
-    
-    // If the user doesn't select an answer for all the questions have the sweet alert pop up
-        if (plantSum === undefined) {
-            swal({
-                text: "Make sure to answer them all!",
-                icon: "error",
-            });
-        };
-
-        for (let i = 0; i < app.plants.length; i++) {
-            const tag = app.plants[i].tag;
         
-    // Match the sum of the user responses with the corresponding plant tag name, store matching text, img, and alt in a variable 
-            if (plantSum.includes(tag)) { 
-                plantText = app.plants[i].text;
-                plantImage = app.plants[i].src;
-                plantAlt = app.plants[i].alt;
+        // Three variables to store the user's answers from each question
+            const answer1 = $("input[name=light]:checked").val();
+            const answer2 = $("input[name=water]:checked").val(); 
+            const answer3 = $("input[name=record]:checked").val();
+    
+        // Convert answers into numbers to be able to add them together
+            const sum = parseInt(answer1) + parseInt(answer2) + parseInt(answer3);
+    
+        // Get plant name from plantSum object based on user selection
+            const plantSum = app.plantValue[sum];
+            let plantText;
+            let plantImage;
+            let plantAlt;
+        
+        // If the user doesn't select an answer for all the questions have the sweet alert pop up
+            if (plantSum === undefined) {
+                swal({
+                    text: "Make sure to answer them all!",
+                    icon: "error",
+                });
             };
-        };  
     
-
-    //  Dynamically add html stored in variables to the DOM
-        $(".quizResults").html(`<h3>${plantText}</h3>
-        <img class="imageStyles" src="${plantImage}" alt="${plantAlt}"></img>
-            `);
-        });
-
-    // Smooth scroll after clicking "Get your plant" button
-        $(".submit").click(function () {
-            $("html, body").animate({
-                scrollTop: $(this).offset().top
-            }, 800);
-        });
-
-    // This button reloads the page and scrolls to the top to take quiz again
-        $(".takeQuizAgain").on('click', function () {
-            location.reload();
-            $("html").scrollTop(0);
-        });
+            for (let i = 0; i < app.plants.length; i++) {
+                const tag = app.plants[i].tag;
+            
+        // Match the sum of the user responses with the corresponding plant tag name, store matching text, img, and alt in a variable 
+                if (plantSum.includes(tag)) { 
+                    plantText = app.plants[i].text;
+                    plantImage = app.plants[i].src;
+                    plantAlt = app.plants[i].alt;
+                };
+            };  
+        
     
+        //  Dynamically add html stored in variables to the DOM
+            $(".quizResults").html(`<h3>${plantText}</h3>
+            <img class="imageStyles" src="${plantImage}" alt="${plantAlt}"></img>
+                `);
+            });
+    
+        // Smooth scroll after clicking "Get your plant" button
+            $(".submit").click(function () {
+                $("html, body").animate({
+                    scrollTop: $(this).offset().top
+                }, 800);
+            });
+    
+        // This button reloads the page and scrolls to the top to take quiz again
+            $(".takeQuizAgain").on('click', function () {
+                location.reload();
+                $("html").scrollTop(0);
+            });
+            
+
+    };
+    // Initializing event listeners function
+        app.init = function() {
+            app.eventListeners();
+        }
 // Wait until document is ready before running 
     $(document).ready(function () {
         app.init();
