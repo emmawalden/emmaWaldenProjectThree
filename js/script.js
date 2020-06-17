@@ -1,4 +1,8 @@
-const plantValue = {
+// Empty object for namespacing
+const app = {};
+
+
+app.plantValue = {
     30: "ficus",
     25: "monstera",
     20: "succulent",
@@ -8,7 +12,7 @@ const plantValue = {
     0: "plastic",
 }
 
-const plants = [
+app.plants = [
         {
             text: "You're a pro get yourself a Fiddle Leaf Fig!",
             // Photo by Lauren Mancke on Unsplash
@@ -52,9 +56,6 @@ const plants = [
             tag: "plastic",
         },
     ];
-
-// Wait until document is ready before running 
-$(document).ready(function() {
     
     $("form").on("submit", function(event) {
         //  prevent default action from refreshing the page when submit is clicked 
@@ -70,7 +71,7 @@ $(document).ready(function() {
         const sum = parseInt(answer1) + parseInt(answer2) + parseInt(answer3);
 
     // Get plant name from plantSum object based on user selection
-        const plantSum = plantValue[sum];
+        const plantSum = app.plantValue[sum];
         let plantText;
         let plantImage;
         let plantAlt;
@@ -83,14 +84,14 @@ $(document).ready(function() {
             });
         };
 
-        for (let i = 0; i < plants.length; i++) {
-            const tag = plants[i].tag;
+        for (let i = 0; i < app.plants.length; i++) {
+            const tag = app.plants[i].tag;
         
     // Match the sum of the user responses with the corresponding plant tag name, store matching text, img, and alt in a variable 
             if (plantSum.includes(tag)) { 
-                plantText = plants[i].text;
-                plantImage = plants[i].src;
-                plantAlt = plants[i].alt;
+                plantText = app.plants[i].text;
+                plantImage = app.plants[i].src;
+                plantAlt = app.plants[i].alt;
             };
         };  
     
@@ -113,5 +114,8 @@ $(document).ready(function() {
             location.reload();
             $("html").scrollTop(0);
         });
-
+    
+// Wait until document is ready before running 
+    $(document).ready(function () {
+        app.init();
     });
